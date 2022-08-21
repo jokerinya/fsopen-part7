@@ -15,9 +15,12 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "eslint": "eslint .",
         "cypress:open": "cypress open",
-        "test:e2e": "cypress run"
+        "test:e2e": "cypress run",
+        "eslint": "eslint .",
+        "prettier-check": "prettier --check src/**/*.js",
+        "prettier": "prettier --write src/**/*.js",
+        "format": "npm run prettier && npm run eslint"
     },
     "eslintConfig": {
         "extends": [
@@ -44,6 +47,7 @@
         "@testing-library/user-event": "^14.1.1",
         "cypress": "^9.6.0",
         "eslint-plugin-cypress": "^2.12.1",
-        "eslint-plugin-jest": "^26.5.3"
+        "eslint-plugin-jest": "^26.5.3",
+        "prettier": "2.7.1"
     }
 }
