@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { deleteBlog, likeBlog } from '../reducers/blogReducer';
+import {
+    setSuccessNotification,
+    setErrorNotification,
+} from '../reducers/notificationReducer';
 
-const Blog = ({ blog, user, onBlogLike, onBlogDelete }) => {
+const Blog = ({ blog, user }) => {
+    const dispatch = useDispatch();
     const [viewDetails, setViewDetails] = useState(false);
 
-    const createdByUser = blog.user.username === user.username;
+    const createdByUser = blog.user.id === user.id;
 
     const blogStyle = {
         paddingTop: 10,
@@ -20,12 +27,12 @@ const Blog = ({ blog, user, onBlogLike, onBlogDelete }) => {
             user: blog.user.id,
             likes: blog.likes + 1,
         };
-        onBlogLike(updatedBlogObj);
+        dispatch(likeBlog(updatedBlogObj));
     };
 
     const handleRemoveClick = () => {
         if (window.confirm(`Remove blog ${blog.title} by ${blog.author}`)) {
-            onBlogDelete(blog.id);
+            dispatch(deleteBlog(blog.id));
         }
     };
 
@@ -67,7 +74,6 @@ Blog.propTypes = {
     blog: PropTypes.object.isRequired,
     user: PropTypes.object.isRequired,
     onBlogLike: PropTypes.func,
-    onBlogDelete: PropTypes.func,
 };
 
 export default Blog;
