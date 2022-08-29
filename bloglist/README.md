@@ -41,3 +41,10 @@ Expand your solution so that it is again possible to like and delete a blog.
 ## 7.13: redux, step4
 
 Store the information about the signed-in user in the Redux store.
+
+## 7.14: Users view
+
+Implement a view to the application that displays all of the basic information
+related to users:
+
+![Users view](./readmeimg/41.png)
