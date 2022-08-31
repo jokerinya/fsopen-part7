@@ -1,16 +1,16 @@
 import React, { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 import { initializeBlogs } from '../reducers/blogReducer';
 import Notification from './Notification';
 import Togglable from './Togglable';
 import BlogForm from './BlogForm';
-import Blog from './Blog';
 
 const BlogList = () => {
     /* store */
     const dispatch = useDispatch();
     const blogs = useSelector((state) => state.blogs);
-    const user = useSelector((state) => state.user);
     /* Refs */
     const createFormRef = useRef();
     /* Effects */
@@ -23,6 +23,14 @@ const BlogList = () => {
         createFormRef.current.toggleVisibility();
     };
 
+    const blogStyle = {
+        paddingTop: 10,
+        paddingLeft: 2,
+        border: 'solid',
+        borderWidth: 1,
+        marginBottom: 5,
+    };
+
     return (
         <div>
             <Notification />
@@ -30,7 +38,9 @@ const BlogList = () => {
                 <BlogForm changeVisiblity={handleVisibilty} />
             </Togglable>
             {blogs.map((blog) => (
-                <Blog key={blog.id} blog={blog} user={user} />
+                <div key={blog.id} style={blogStyle} className='blog-container'>
+                    <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>
+                </div>
             ))}
         </div>
     );

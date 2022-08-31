@@ -48,3 +48,57 @@ Implement a view to the application that displays all of the basic information
 related to users:
 
 ![Users view](./readmeimg/41.png)
+
+## 7.15: Individual user view
+
+Implement a view for individual users that displays all of the blog posts added
+by that user:
+
+![Individual User](./readmeimg/44.png)
+
+You can access the view by clicking the name of the user in the view that lists
+all users:
+
+![Click User](./readmeimg/43.png)
+
+**_NB:_** you will almost certainly stumble across the following error message
+during this exercise:
+
+![Error](./readmeimg/42ea.png)
+
+The error message will occur if you refresh the page for an individual user.
+
+The cause of the issue is that, when we navigate directly to the page of an
+individual user, the React application has not yet received the data from the
+backend. One solution for fixing the problem is to use conditional rendering:
+
+```js
+const User = () => {
+  const user = ...
+  if (!user) {
+    return null
+  }
+
+  return (
+    <div>
+      // ...
+    </div>
+  )
+}
+```
+
+## 7.16: Blog view
+
+Implement a separate view for blog posts. You can model the layout of your view
+after the following example:
+
+![Blog view](./readmeimg/45.png)
+
+Users should be able to access the view by clicking the name of the blog post in
+the view that lists all of the blog posts.
+
+![Blog posts](./readmeimg/46.png)
+
+After you're done with this exercise, the functionality that was implemented in
+exercise 5.7 is no longer necessary. Clicking a blog post no longer needs to
+expand the item in the list and display the details of the blog post.
