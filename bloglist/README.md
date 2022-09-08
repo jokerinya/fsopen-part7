@@ -102,3 +102,24 @@ the view that lists all of the blog posts.
 After you're done with this exercise, the functionality that was implemented in
 exercise 5.7 is no longer necessary. Clicking a blog post no longer needs to
 expand the item in the list and display the details of the blog post.
+
+## 7.17: Navigation
+
+Implement a navigation menu for the application:
+
+![Navbar](./readmeimg/47.png)
+
+## 7.18: comments, step1
+
+Implement the functionality for commenting on blog posts:
+
+![Comments1](./readmeimg/48.png)
+
+Comments should be anonymous, meaning that they are not associated to the user
+who left the comment.
+
+In this exercise, it is enough for the frontend to only display the comments
+that the application receives from the backend.
+
+An appropriate mechanism for adding comments to a blog post would be an
+`HTTP POST` request to the `api/blogs/:id/comments` endpoint.

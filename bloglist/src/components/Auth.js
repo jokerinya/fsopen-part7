@@ -7,10 +7,10 @@ const Auth = () => {
     const user = useSelector((state) => state.user);
 
     return (
-        <p>
-            {user.name} logged in
+        <>
+            {user.name} logged in{' '}
             <button onClick={() => dispatch(logoutUser())}>logout</button>
-        </p>
+        </>
     );
 };
 

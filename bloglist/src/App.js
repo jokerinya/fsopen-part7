@@ -13,6 +13,7 @@ import { initializeAllUsers } from './reducers/usersReducer';
 import UserList from './components/UserList';
 import UserDetail from './components/UserDetail';
 import Blog from './components/Blog';
+import Navigation from './components/Navigation';
 
 const App = () => {
     const dispatch = useDispatch();
@@ -28,8 +29,8 @@ const App = () => {
             {/* if user defined */}
             {user ? (
                 <>
+                    <Navigation />
                     <h2>blogs</h2>
-                    <Auth />
                     <Routes>
                         <Route path='/' element={<BlogList />} />
                         <Route path='/users/:id' element={<UserDetail />} />
