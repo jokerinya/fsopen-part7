@@ -1,5 +1,21 @@
 import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
+
+const Button = styled.button`
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid palevioletred;
+    color: palevioletred;
+    padding: 0.25rem 1rem;
+
+    ${(props) =>
+        props.primary &&
+        css`
+            background: palevioletred;
+            color: white;
+        `};
+`;
 
 // const Togglable = forwardRef((props, refs)=>{})
 const Togglable = forwardRef((props, refs) => {
@@ -25,7 +41,9 @@ const Togglable = forwardRef((props, refs) => {
             </div>
             <div style={showWhenVisible}>
                 {props.children}
-                <button onClick={toggleVisibility}>cancel</button>
+                <Button primary onClick={toggleVisibility}>
+                    cancel
+                </Button>
             </div>
         </div>
     );

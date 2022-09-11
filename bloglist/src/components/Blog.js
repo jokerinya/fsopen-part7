@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { deleteBlog, likeBlog } from '../reducers/blogReducer';
+import CommentForm from './CommentForm';
 import Comments from './Comments';
 
 const Blog = () => {
@@ -56,6 +57,8 @@ const Blog = () => {
                     </button>
                 )}
             </div>
+            <h3>Comments</h3>
+            <CommentForm blog={blog} />
             <Comments comments={blog.comments} />
         </div>
     );

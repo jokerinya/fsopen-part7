@@ -99,3 +99,5 @@ The `useResource` custom hook returns an array of two items just like the state 
 If you implement the hook correctly, it can be used for both notes and phone numbers (start the server with the `npm run server` command at the port 3005).
 
 ![Ultimate Hooks](./readmeimg/21e.png)
+
+## Exercise 7.9-7.21: [bloglist](https://github.com/jokerinya/fsopen-part7/tree/main/bloglist)

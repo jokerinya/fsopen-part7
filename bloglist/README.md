@@ -1,5 +1,11 @@
 # Exercises
 
+## Exercises 7.1-7.6: [routed-anecdotes](https://github.com/jokerinya/fsopen-part7/tree/main/routed-anecdotes)
+
+## Exercise 7.7: [country-hook](https://github.com/jokerinya/fsopen-part7/tree/main/country-hook)
+
+## Exercise 7.8: [ultimate-hooks](https://github.com/jokerinya/fsopen-part7/tree/main/ultimate-hooks)
+
 > ## Exercises 7.9 - 7.21
 
 ## 7.9: automatic code formatting
@@ -123,3 +129,24 @@ that the application receives from the backend.
 
 An appropriate mechanism for adding comments to a blog post would be an
 `HTTP POST` request to the `api/blogs/:id/comments` endpoint.
+
+## 7.19: comments, step2
+
+Extend your application so that users can add comments to blog posts from the
+frontend:
+
+![Comments](./readmeimg/49.png)
+
+## 7.20: Styles, step1
+
+Improve the appearance of your application by applying one of the methods shown
+in the course material.
+
+## 7.21: Styles, step2
+
+You can mark this exercise as finished if you use an hour or more for styling
+your application.
+
+This was the last exercise for this part of the course and it's time to push
+your code to GitHub and mark all of your finished exercises to the
+[exercise submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).

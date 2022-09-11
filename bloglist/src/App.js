@@ -5,7 +5,6 @@ import { Route, Routes } from 'react-router-dom';
 
 import { initializeUser } from './reducers/authReducer';
 
-import Auth from './components/Auth';
 import LoginForm from './components/LoginForm';
 import BlogList from './components/BlogList';
 import Notification from './components/Notification';
@@ -30,7 +29,7 @@ const App = () => {
             {user ? (
                 <>
                     <Navigation />
-                    <h2>blogs</h2>
+                    <h2>Blogs</h2>
                     <Routes>
                         <Route path='/' element={<BlogList />} />
                         <Route path='/users/:id' element={<UserDetail />} />

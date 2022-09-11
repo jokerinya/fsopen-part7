@@ -1,3 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&display=swap');
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: azure;
+    font-family: 'Comfortaa', cursive;
+}
+
+button {
+    background: rgb(58, 151, 228);
+    font-size: 1rem;
+    margin: 0.5rem 0rem 0.5rem 0;
+    padding: 0.5rem;
+    border: 2px solid rgb(58, 151, 228);
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input {
+    margin: 1rem 0.5rem;
+    font-size: 1rem;
+    border: 1px solid lightsteelblue;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.formArea {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputArea {
+    display: flex;
+    align-content: space-around;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.inputArea span {
+    width: 3rem;
+}
+
 .success {
     color: green;
     background: lightgrey;

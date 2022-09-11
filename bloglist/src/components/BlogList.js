@@ -24,11 +24,10 @@ const BlogList = () => {
     };
 
     const blogStyle = {
-        paddingTop: 10,
-        paddingLeft: 2,
-        border: 'solid',
-        borderWidth: 1,
-        marginBottom: 5,
+        margin: '1rem 0 0',
+        border: '1px saddlebrown solid',
+        borderRadius: 5,
+        padding: '0.5rem',
     };
 
     return (
